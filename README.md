@@ -1,3 +1,3 @@
 # chatbot
-KI-Ähnlicher Chatbot
+KI-ähnlicher Chatbot mit Bild-zu-Text Anwendung
 -------------------
