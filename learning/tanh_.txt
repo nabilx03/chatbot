@@ -1,0 +1,4 @@
+,    
+    tanh_(x) {
+        //return pow((1/(exp(x) + exp((-1)*x))), 2); //tanh'(x) = (sech(x))^2 = (1/(e^x + e^-x))^2
+    }
