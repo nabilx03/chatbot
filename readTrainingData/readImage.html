@@ -1,0 +1,53 @@
+<html>
+    <script>
+
+    let imagePixels = [];
+    
+    function getImageInfo(pic) {
+	    var ctxt = canvas.getContext('2d');
+	    var img = new Image;
+	    img.src = pic;
+	    img.onload = function() {
+		    ctxt.drawImage(img, 0, 0);
+		    var data = ctxt.getImageData(0, 0, img.width, img.height).data;
+		    var red = data[0], green = data[1], blue = data[2];
+            alert("hight is " + img.height + "px,width is " + img.width + "px,pix(1,1)'s r:"+red + ',g:' + green + ',b:' + blue);
+            for(i=0; i<img.width; i++) {
+                imagePixels.push([]);
+                for(j=0; j<img.height; j++) {
+                    let imgData = ctxt.getImageData(i, j, img.width, img.height).data;
+                    imagePixels[i].push([imgData[0], imgData[1], imgData[2]]);
+                }
+                console.log((i+1)*100/img.width);
+            }
+            console.log(imagePixels);
+            getLetters(imagePixels);
+	    }
+    }
+
+    var openFile = function(file) {
+        var input = file.target;
+
+        var reader = new FileReader();
+        reader.onload = function(e){
+            var dataURL = reader.result;
+            var output = document.getElementById('output');
+            output.src = dataURL;
+            getImageInfo(e.target.result);
+        };
+        reader.readAsDataURL(input.files[0]);
+    };
+
+
+    function getLetters() {
+           
+    }
+
+
+    </script>
+    <p id="status"></p>
+    <input type='file' accept='image/*' onchange='openFile(event)'><br>
+    <img id='output' style="height:300px; width:auto;">
+    <canvas id="canvas" style="display: none;"></canvas>
+    
+</html>
