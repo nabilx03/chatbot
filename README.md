@@ -1,3 +1,0 @@
-# chatbot
-KI-Ähnlicher Chatbot
--------------------

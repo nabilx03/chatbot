@@ -1,0 +1,2 @@
+D:\Dokumente\Programmierung\Primzahlen\C++-KI\Primzahl-KI\Debug\Primzahl-KI.exe
+D:\Dokumente\Programmierung\Primzahlen\C++-KI\Primzahl-KI\Debug\Primzahl-KI.pdb

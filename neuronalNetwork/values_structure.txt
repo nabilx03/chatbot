@@ -1,7 +1,0 @@
-global = [..., layer_n-1, layer_n]
-
-layer_n = [..., neuron_n-1, neuron_n]
-
-neuron_n = [bias, [..., weight_j_k-1, weight_j_k]]
-
-global = [[...], [[bias], [..., weight_j_k]]]
